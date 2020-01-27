@@ -37,7 +37,6 @@ public class NsxTFirewallRulesCrud extends VmcSamplesAbstractBase {
     private String orgId;
     private String sddcId;
     private String ruleName;
-    private Boolean deleteRule = false;
     private ApiClient apiClient;
 
     public static String VMC_SERVER = "https://vmc.vmware.com";
