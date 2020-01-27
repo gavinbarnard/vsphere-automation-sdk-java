@@ -21,7 +21,13 @@ $ docker run --rm -it vmware/vsphere-automation-sdk-java
 At this point you are now logged into the container that you have just built and you can run the samples as per the following "listVMs" example:
 
 ```console
-root@b5f3a6e06c2f:/work/vsphere-automation-sdk-java# java -ea -cp target/vsphere-samples-6.5.0.jar vmware.samples.vcenter.vm.list.ListVMs --server myvcserver.mydomain.com --username administrator@mydomain.com --password Admin\!23 --skip-server-verification
+
+export VC_USER="administrator@domain.local"
+export VC_PASS="password"
+export VC_FQDN="myvcserver.mydomain.com"
+
+root@b5f3a6e06c2f:/work/vsphere-automation-sdk-java# java -ea -cp target/vsphere-samples-7.0.0.jar vmware.samples.vcenter.vm.list.ListVMs --server $VC_FQDN --username $VC_USER --password $VC_PASS --skip-server-verification
+
 ----------------------------------------
 List of VMs
 Summary (com.vmware.vcenter.VM.summary) => {
